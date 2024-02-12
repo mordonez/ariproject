@@ -1,16 +1,17 @@
-# AriProject
+# AriProject
 
 Este script de Python utiliza OpenCV para extraer fotogramas específicos de un video. Los segundos de los fotogramas a extraer se especifican en un archivo CSV en la columna Frame
 
-## Dependencias
+## Instalación de dependencias
 
-El script depende de las siguientes bibliotecas de Python:
+Este script requiere las bibliotecas de Python OpenCV, pandas y os. Puedes instalar estas dependencias con pip, el administrador de paquetes de Python, utilizando el archivo `requirements.txt` incluido. Abre una terminal y ejecuta el siguiente comando:
 
-- OpenCV (cv2)
-- pandas
-- os
 
-## Uso
+```bash
+pip install -r requirements.txt
+```
+
+## Uso
 
 El script define una función `extract_frames` que toma tres argumentos:
 
@@ -20,9 +21,9 @@ El script define una función `extract_frames` que toma tres argumentos:
 
 La función `extract_frames` abre el video, lee el archivo CSV y extrae el fotograma correspondiente a cada segundo especificado en el CSV. Cada fotograma se guarda como una imagen PNG en la carpeta de salida.
 
-## Ejemplo de uso
+## Ejemplo de uso
 
-```
+```python
 extract_frames('video.mp4', 'data.csv', 'frames')
 ```
 
