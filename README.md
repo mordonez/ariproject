@@ -18,6 +18,7 @@ El script define una función `extract_frames` que toma tres argumentos:
 - `video_path`: la ruta al archivo de video del que se extraerán los fotogramas.
 - `csv_path`: la ruta a un archivo CSV que contiene los segundos de los fotogramas a extraer. El archivo CSV debe tener una columna llamada 'Frame' que contiene los segundos.
 - `output_folder`: la ruta a la carpeta donde se guardarán los fotogramas extraídos. Si la carpeta no existe, se creará.
+- `size` (opcional): el tamaño deseado para el ancho y alto de las imágenes exportadas. Si se proporciona, todas las imágenes se redimensionarán a este tamaño. Si no se proporciona, las imágenes se guardarán con su tamaño original después de hacerlas cuadradas.
 
 La función `extract_frames` abre el video, lee el archivo CSV y extrae el fotograma correspondiente a cada segundo especificado en el CSV. Cada fotograma se guarda como una imagen PNG en la carpeta de salida.
 
