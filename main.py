@@ -26,6 +26,18 @@ def extract_frames(video_path, csv_path, output_folder):
 
         # Si el frame se leyó correctamente, guardarlo como imagen PNG
         if ret:
+            # Obtener las dimensiones de la imagen
+            height, width = frame.shape[:2]
+
+            # Calcular la diferencia en tamaño para hacer la imagen cuadrada
+            diff = abs(height - width)
+
+            # Añadir bordes si es necesario
+            if height > width:
+                frame = cv2.copyMakeBorder(frame, 0, 0, diff // 2, diff // 2, cv2.BORDER_CONSTANT, value=[0, 0, 0])
+            elif width > height:
+                frame = cv2.copyMakeBorder(frame, diff // 2, diff // 2, 0, 0, cv2.BORDER_CONSTANT, value=[0, 0, 0])
+
             cv2.imwrite(os.path.join(output_folder, f'{second}.png'), frame)
             print(f"Done: {second}")
 
