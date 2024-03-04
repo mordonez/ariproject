@@ -1,4 +1,4 @@
-# AriProject
+# Ari Project
 
 Este script de Python utiliza OpenCV para extraer fotogramas específicos de un video. Los segundos de los fotogramas a extraer se especifican en un archivo CSV en la columna Frame
 
